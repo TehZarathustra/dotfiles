@@ -377,7 +377,7 @@
   },
   "Cursor Type" : 2,
   "Blur" : false,
-  "Normal Font" : "Monaco 12",
+  "Normal Font" : "Monaco 16",
   "Vertical Spacing" : 1,
   "Disable Printing" : false,
   "Ansi 7 Color" : {
@@ -414,7 +414,7 @@
   "Bound Hosts" : [
 
   ],
-  "Non Ascii Font" : "Monaco 12",
+  "Non Ascii Font" : "Monaco 16",
   "Ansi 13 Color" : {
     "Green Component" : 0.3333333432674408,
     "Red Component" : 1,
