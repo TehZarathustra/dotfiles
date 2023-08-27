@@ -1,6 +1,6 @@
 [user]
-    name = tenorok
-    email = mail@tenorok.ru
+    name = tehzarathustra
+    email = tehzarathustra@gmail.com
 [core]
     editor = "code --wait"
     excludesfile = ~/.gitignore

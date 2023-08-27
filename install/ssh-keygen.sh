@@ -1,4 +1,4 @@
-EMAIL=${1:-mail@tenorok.ru}
+EMAIL=${1:-tehzarathustra@gmail.com}
 KEY_NAME=${2:-id_rsa}
 
 [ -d ~/.ssh ] || mkdir ~/.ssh

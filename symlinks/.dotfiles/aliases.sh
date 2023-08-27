@@ -11,10 +11,10 @@ function gitst {
 }
 
 function gitDefault {
-  export GIT_AUTHOR_NAME=tenorok
-  export GIT_AUTHOR_EMAIL=mail@tenorok.ru
-  export GIT_COMMITTER_NAME=tenorok
-  export GIT_COMMITTER_EMAIL=mail@tenorok.ru
+  export GIT_AUTHOR_NAME=tehzarathustra
+  export GIT_AUTHOR_EMAIL=tehzarathustra@gmail.com
+  export GIT_COMMITTER_NAME=tehzarathustra
+  export GIT_COMMITTER_EMAIL=tehzarathustra@gmail.com
   export GITHUB_HOST=github.com
 }
 
@@ -22,8 +22,4 @@ function NPMDefault {
   npm config set registry https://registry.npmjs.org/
 }
 
-if [[ -d ~/yandex ]]; then
-  include $DOTFILES/work.sh
-else
-  include $DOTFILES/home.sh
-fi
+include $DOTFILES/work.sh

@@ -12,7 +12,6 @@ export APPLICATIONS=(
     ag
     tree
     m-cli
-    sublime-text
     micro
     visual-studio-code
     iterm2
@@ -21,9 +20,8 @@ export APPLICATIONS=(
     mongodb-compass
     transmit
     telegram-desktop
+    discord
     whatsapp
-    slack
-    skype
     zoom
     teamviewer
     yandex
