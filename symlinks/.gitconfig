@@ -2,7 +2,7 @@
     name = tehzarathustra
     email = tehzarathustra@gmail.com
 [core]
-    editor = "code --wait"
+    editor = vim
     excludesfile = ~/.gitignore
     quotepath = false
 [color]
