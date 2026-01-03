@@ -1,7 +1,7 @@
-## Quoting rules (zsh):
+## Quoting rules (zsh)
 
-• Shell macros (alias, functions-as-macros) -> single quotes by default
-• Environment variables (export)            -> double quotes by default
+- Shell macros (alias, functions-as-macros) -> single quotes by default
+- Environment variables (export)            -> double quotes by default
 
 ## File roles
 
