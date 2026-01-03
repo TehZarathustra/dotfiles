@@ -1,0 +1,29 @@
+; global baseline (personal)
+root = false
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+; Make recipes require tabs
+[{Makefile,GNUmakefile,makefile,Makefile.*,GNUmakefile.*}]
+indent_style = tab
+tab_width = 8
+
+; YAML forbids tabs in practice
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+; JSON is almost always 2-space in tooling (and tabs are a footgun)
+[*.json]
+indent_style = space
+indent_size = 2
+
+; Markdown: don’t strip trailing whitespace (it can be meaningful)
+[*.md]
+trim_trailing_whitespace = false
