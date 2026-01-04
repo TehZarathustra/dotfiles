@@ -6,8 +6,12 @@ set -eu
 # if invoked without a slash, $0 may not resolve to the script directory
 ROOT=$(cd "$(dirname "$0")" && pwd)
 
+# home
 ln -snf "$ROOT/home/.gitconfig" "$HOME/.gitconfig"
 ln -snf "$ROOT/home/.editorconfig" "$HOME/.editorconfig"
 ln -snf "$ROOT/home/.zprofile" "$HOME/.zprofile"
 ln -snf "$ROOT/home/.zshrc" "$HOME/.zshrc"
-ln -snf "$ROOT/home/.tmux.conf" "$HOME/.tmux.conf"
+
+# tmux
+mkdir -p "$HOME/.config/tmux"
+ln -snf "$ROOT/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
