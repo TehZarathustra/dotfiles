@@ -20,5 +20,9 @@ mkdir -p "$HOME/.config/tmux"
 ln -snf "$ROOT/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
 # alacritty
-mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.config/"
 ln -snf "$ROOT/config/alacritty" "$HOME/.config/alacritty"
+
+# neovim
+mkdir -p "$HOME/.config/"
+ln -snf "$ROOT/config/nvim" "$HOME/.config/nvim"
