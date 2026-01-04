@@ -1,13 +1,24 @@
 #!/usr/bin/env sh
 set -eu
 
-# portable on macOS + Ubuntu + Arch
-# NOTE: assumes this script is run via ./install.sh (not via PATH);
-# if invoked without a slash, $0 may not resolve to the script directory
-ROOT=$(cd "$(dirname "$0")" && pwd)
+ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
-# @TODO add guards
-# install script can silently overwrite real files
+
+# ---- Homebrew (macOS only) ----
+if [ "$(uname -s)" = "Darwin" ]; then
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "Homebrew not found. Install it first."
+    exit 1
+  fi
+
+  brew bundle install --file="$ROOT/bootstrap/Brewfile"
+  brew bundle install --file="$ROOT/bootstrap/Brewfile.apps"
+fi
+
+
+# ---- Dotfile symlinks ----
+# WARNING: destructive. Overwrites existing dotfiles without backup
+# Intended for fresh machines only
 
 # home
 ln -snf "$ROOT/home/.gitconfig" "$HOME/.gitconfig"
