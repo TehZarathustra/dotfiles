@@ -8,6 +8,13 @@ Minimal and opinionated
 - [Tmux](config/tmux/tmux.conf)
 - [Neovim](config/nvim)
 
+## ⚠️ Warning
+
+This install is **destructive**
+
+- Existing dotfiles are overwritten **without backup**
+- This repository is the **single source of truth**; existing dotfiles are overwritten to match it
+
 ## Install
 ```
 sh install.sh
