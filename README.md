@@ -8,7 +8,7 @@ Minimal and opinionated
 - [Tmux](config/tmux/tmux.conf)
 - [Neovim](config/nvim)
 
-## ⚠️ Warning
+## Warning
 
 This install is **destructive**
 
