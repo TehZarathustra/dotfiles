@@ -2,6 +2,12 @@
 
 Minimal and opinionated
 
+## Current stack
+
+- [Alacritty](config/alacritty/alacritty.toml)
+- [Tmux](config/tmux/tmux.conf)
+- [Neovim](config/nvim)
+
 ## Install
 ```
 sh install.sh
