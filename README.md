@@ -13,7 +13,7 @@ Minimal and opinionated
 This install is **destructive**
 
 - Existing dotfiles are overwritten **without backup**
-- This repository is the **single source of truth**; existing dotfiles are overwritten to match it
+- This repository is the **single source of truth** for dotfiles on the machine
 
 ## Install
 ```
