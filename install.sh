@@ -20,5 +20,5 @@ mkdir -p "$HOME/.config/tmux"
 ln -snf "$ROOT/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
 # alacritty
-mkdir -p "$HOME/.config/alacritty"
-ln -snf "$ROOT/config/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
+mkdir -p "$HOME/.config"
+ln -snf "$ROOT/config/alacritty" "$HOME/.config/alacritty"
