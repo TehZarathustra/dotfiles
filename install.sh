@@ -3,7 +3,6 @@ set -eu
 
 ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
-
 # ---- Homebrew (macOS only) ----
 if [ "$(uname -s)" = "Darwin" ]; then
   if ! command -v brew >/dev/null 2>&1; then
@@ -15,10 +14,8 @@ if [ "$(uname -s)" = "Darwin" ]; then
   brew bundle install --file="$ROOT/bootstrap/Brewfile.apps"
 fi
 
-
 # ---- Dotfile symlinks ----
 # WARNING: destructive. Overwrites existing dotfiles without backup
-# Intended for fresh machines only
 
 # home
 ln -snf "$ROOT/home/.gitconfig" "$HOME/.gitconfig"
