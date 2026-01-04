@@ -1,4 +1,4 @@
-source "$HOME/dotfiles/config/palette.zsh"
+source "$HOME/dotfiles/config/themes/palette.zsh"
 
 # if not interactive, stop here
 [[ -o interactive ]] || return
