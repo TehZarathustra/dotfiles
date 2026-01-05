@@ -12,5 +12,5 @@ brew_utils_install() {
       return 1
     }
 
-  brew bundle --file="$ROOT/bootstrap/Brewfile"
+  brew bundle --file="$ROOT/bootstrap/Brewfile.utils"
 }

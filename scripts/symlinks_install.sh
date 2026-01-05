@@ -14,6 +14,7 @@ symlinks_install() {
   mkdir -p "$HOME/.config"
 
   # tmux
+  rm -rf "$HOME/.config/tmux"
   mkdir -p "$HOME/.config/tmux"
   ln -snf "$ROOT/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
