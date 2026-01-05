@@ -1,6 +1,6 @@
 # dotfiles
 
-Minimal and opinionated
+Minimal, opinionated and destructive
 
 ## Current stack
 
