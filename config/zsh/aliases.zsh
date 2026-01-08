@@ -1,7 +1,10 @@
+# nvim
 alias vi='nvim'
 alias vim='nvim'
 
-#
+# git
+alias gs='git status -sb'
+
 # Use GNU ls (coreutils) instead of BSD ls
 # Why:
 #   - identical ls behavior on macOS and Linux
