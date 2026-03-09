@@ -9,8 +9,6 @@ size = 20
 startup_mode = "Maximized"
 decorations = "Buttonless"
 
-opacity = 0.8
-
 padding.x = 12
 
 [keyboard]
