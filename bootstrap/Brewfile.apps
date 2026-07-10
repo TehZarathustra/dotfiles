@@ -3,6 +3,7 @@ cask "alacritty"
 cask "telegram-desktop"
 cask "vlc"
 cask "discord"
+cask "nikitabobko/tap/aerospace", trusted: true
 
 # Fonts
 cask "font-jetbrains-mono-nerd-font"
