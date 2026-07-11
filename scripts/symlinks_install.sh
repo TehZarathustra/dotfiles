@@ -15,8 +15,12 @@ symlinks_install() {
 
   # tmux
   rm -rf "$HOME/.config/tmux"
-  mkdir -p "$HOME/.config/tmux"
+  mkdir -p "$HOME/.config/tmux" # @TODO: is it really necessary?
   ln -snf "$ROOT/config/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
+
+  # aerospace
+  rm -rf "$HOME/.config/aerospace"
+  ln -snf "$ROOT/config/aerospace" "$HOME/.config/aerospace"
 
   # alacritty
   rm -rf "$HOME/.config/alacritty"
