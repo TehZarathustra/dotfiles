@@ -58,6 +58,24 @@ persistent-workspaces = ["1", "C", "D", "E", "F", "G", "I", "M", "N", "O", "P", 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 on-mode-changed = []
 
+# on window detected callbacks
+# for my case i use only `window-title` but there are many
+#   https://nikitabobko.github.io/AeroSpace/commands#test
+# example: test if contains "chrome" (case insensitive):
+#   aerospace test %{window-title} ~= chrome
+# example: test strict equality
+#   aerospace test %{window-title} = chrome
+#
+# it doesn't support variables, thus i'm stuck
+# with fixed sessions using this
+# for dynamic sessions i'd need to find something better
+on-window-detected = [
+  {
+    if = 'test %{window-title} ~= sandbox-typst',
+    run = 'move-node-to-workspace typst',
+  }
+]
+
 focus-follows-mouse.enabled = false
 
 # Possible values: (qwerty|dvorak|colemak)
