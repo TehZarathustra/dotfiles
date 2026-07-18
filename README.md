@@ -7,6 +7,7 @@ Minimal, opinionated and destructive
 - [Alacritty](config/alacritty/alacritty.toml)
 - [Tmux](config/tmux/tmux.conf)
 - [Neovim](config/nvim)
+- [Aerospace](config/aerospace/aerospace.toml)
 
 ## Warning
 
