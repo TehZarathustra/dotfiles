@@ -4,6 +4,10 @@ brew "git"
 brew "tmux"
 brew "neovim"
 brew "tree-sitter-cli"
-brew "ripgrep"
+# brew "ripgrep"
+brew "ag" # i should really replace it with ripgrep
+# cool nvm replacement (faster and brew friendly)
+brew "fnm"
+brew "python"
 brew "tree"
 brew "jq"
