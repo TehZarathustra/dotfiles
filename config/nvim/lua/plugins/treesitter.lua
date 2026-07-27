@@ -17,6 +17,9 @@ local parsers = {
   'bash',
 }
 
+-- @TODO
+-- having treesitter adds a lot of dependencies
+-- gotta consider opting-out
 return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'main',
