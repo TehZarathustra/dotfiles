@@ -1,35 +1,53 @@
+local parsers = {
+  'lua',
+  'vim',
+  'vimdoc',
+  'javascript',
+  'typescript',
+  'python',
+  'haskell',
+  'html',
+  'scss',
+  'css',
+  'json',
+  'yaml',
+  'toml',
+  'markdown',
+  'markdown_inline',
+  'bash',
+}
+
 return {
-    'nvim-treesitter/nvim-treesitter',
-    -- TODO: this conf using deprecated API, gotta move to new api
-    -- https://github.com/nvim-treesitter/nvim-treesitter/discussions/7927
-    -- https://github.com/nvim-treesitter/nvim-treesitter/discussions/7901
-    -- for now specifying master branch is enough to keep the current conf afloat
-    branch = 'master',
-    priority = 100,
-    config = function()
-        require('nvim-treesitter.configs').setup {
-            -- Install these parsers by default
-            ensure_installed = {
-                'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'python', 'haskell',
-                'html', 'scss', 'css', 'json', 'yaml', 'toml', 'markdown', 'bash'
-            },
-            -- Automatically install missing parsers
-            -- (i.e i've opened a file and don't have parser for it)
-            auto_install = true,
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-            },
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    -- <CR> Enter
-                    init_selection = '<CR>',
-                    node_incremental = '<CR>',
-                    -- <BS> Backspace
-                    node_decremental = '<BS>',
-                },
-            },
-        }
-    end
+  'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
+  lazy = false,
+  build = ':TSUpdate',
+
+  config = function()
+    local treesitter = require('nvim-treesitter')
+
+    treesitter.setup()
+
+    -- No-op for parsers that are already installed.
+    treesitter.install(parsers)
+
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = parsers,
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
+
+    vim.keymap.set({ 'n', 'x' }, '<CR>', function()
+      require('vim.treesitter._select').select_next(vim.v.count1)
+      end, {desc = 'Select next Tree-sitter node'})
+
+    vim.keymap.set('x', '<BS>', function()
+      require('vim.treesitter._select').select_prev(
+        vim.v.count1
+      )
+      end, {
+      desc = 'Select previous Tree-sitter node',
+    })
+  end,
 }
