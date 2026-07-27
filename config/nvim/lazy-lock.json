@@ -12,7 +12,7 @@
   "nvim-autopairs": { "branch": "master", "commit": "7b9923abad60b903ece7c52940e1321d39eccc79" },
   "nvim-cmp": { "branch": "main", "commit": "2ffe79f1f021def8dd1fcd81deb16f1bb0d989f3" },
   "nvim-lint": { "branch": "master", "commit": "a219b2c9e5b4765e5c845aba119dad55806fcaf1" },
-  "nvim-lspconfig": { "branch": "master", "commit": "3371bf298c1f56efc26771ee961f461176958fb5" },
+  "nvim-lspconfig": { "branch": "master", "commit": "d592c1e6ad9a0a01b3d5ed3f0345d68407167181" },
   "nvim-treesitter": { "branch": "master", "commit": "cf12346a3414fa1b06af75c79faebe7f76df080a" },
   "oil.nvim": { "branch": "master", "commit": "b73018b75affd13fa38e2fc94ef753b465f770d7" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
@@ -21,5 +21,5 @@
   "transparent.nvim": { "branch": "main", "commit": "e00ca1cf09caef575edf8da7e5a8b9193893b4c7" },
   "typescript-tools.nvim": { "branch": "master", "commit": "c2f5910074103705661e9651aa841e0d7eea9932" },
   "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
-  "vim-habamax": { "branch": "master", "commit": "f6e3f8d68606e51deaeca591f2036b3e14fb120c" }
+  "vim-habamax": { "branch": "master", "commit": "b4775d7efd7060240104898d992cec0ada87ecc1" }
 }
