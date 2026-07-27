@@ -1,4 +1,5 @@
 ; global baseline (personal)
+; @TODO this config is excessive and should be simplified
 root = false
 
 [*]
