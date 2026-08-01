@@ -13,13 +13,14 @@ return {
           if vim.g.colors_name ~= "habamax" then return end
 
           -- softer reds / diagnostics
-          vim.api.nvim_set_hl(0, "ErrorMsg",         {fg = "#d06060"})
-          vim.api.nvim_set_hl(0, "NotifyERRORBorder",{fg = "#b68c52"})
+          vim.api.nvim_set_hl(0, "ErrorMsg",           {fg = "#d06060"})
+          vim.api.nvim_set_hl(0, "NotifyERRORBorder",  {fg = "#b68c52"})
 
-          vim.api.nvim_set_hl(0, "Error",            {fg = "#d06060"})
-          vim.api.nvim_set_hl(0, "DiagnosticError",  {fg = "#d06060"})
-          vim.api.nvim_set_hl(0, "DiffDelete",       {fg = "#803333", bg = "NONE"})
-          vim.api.nvim_set_hl(0, "SpellBad",         {sp = "#d06060", undercurl = true})
+          vim.api.nvim_set_hl(0, "Error",              {fg = "#d06060"})
+          vim.api.nvim_set_hl(0, "DiagnosticError",    {fg = "#d06060"})
+          vim.api.nvim_set_hl(0, "DiffDelete",         {fg = "#803333", bg = "NONE"})
+          vim.api.nvim_set_hl(0, "SpellBad",           {sp = "#d06060", undercurl = true})
+          vim.api.nvim_set_hl(0, '@markup.link.label', {underline = false})
         end,
       })
 
