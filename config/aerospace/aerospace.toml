@@ -73,6 +73,10 @@ on-window-detected = [
   {
     if = 'test %{window-title} ~= sandbox-typst',
     run = 'move-node-to-workspace typst',
+  },
+  {
+    if = 'test %{window-title} ~= sandbox-react',
+    run = 'move-node-to-workspace react',
   }
 ]
 
