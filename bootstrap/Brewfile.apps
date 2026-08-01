@@ -5,6 +5,7 @@ cask "vlc"
 cask "discord"
 cask "obsidian"
 cask "nikitabobko/tap/aerospace", trusted: true
+cask "skim"
 
 # Fonts
 cask "font-jetbrains-mono-nerd-font"

@@ -9,5 +9,6 @@ brew "ag" # i should really replace it with ripgrep
 # cool nvm replacement (faster and brew friendly)
 brew "fnm"
 brew "python"
+brew "typst"
 brew "tree"
 brew "jq"
