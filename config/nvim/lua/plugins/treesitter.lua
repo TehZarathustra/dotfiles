@@ -4,6 +4,7 @@ local parsers = {
   'vimdoc',
   'javascript',
   'typescript',
+  'tsx',
   'python',
   'haskell',
   'html',
@@ -35,9 +36,8 @@ return {
     treesitter.install(parsers)
 
     vim.api.nvim_create_autocmd('FileType', {
-      pattern = parsers,
-      callback = function()
-        pcall(vim.treesitter.start)
+      callback = function(args)
+        pcall(vim.treesitter.start, args.buf)
       end,
     })
 
