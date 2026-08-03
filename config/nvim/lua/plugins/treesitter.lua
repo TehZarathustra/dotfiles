@@ -36,21 +36,29 @@ return {
     treesitter.install(parsers)
 
     vim.api.nvim_create_autocmd('FileType', {
+      callback = function(args) pcall(vim.treesitter.start, args.buf) end})
+
+    vim.api.nvim_create_autocmd('FileType', {
       callback = function(args)
-        pcall(vim.treesitter.start, args.buf)
+        if not pcall(vim.treesitter.start, args.buf) then
+          return
+        end
+
+        vim.keymap.set({'n', 'x'}, '<CR>', function()
+          require('vim.treesitter._select').select_next(vim.v.count1)
+          end, {
+          buffer = args.buf,
+          desc = 'Select next Tree-sitter node',
+        })
+
+        vim.keymap.set('x', '<BS>', function()
+          require('vim.treesitter._select').select_prev(vim.v.count1)
+          end, {
+          buffer = args.buf,
+          desc = 'Select previous Tree-sitter node',
+          }
+        )
       end,
-    })
-
-    vim.keymap.set({ 'n', 'x' }, '<CR>', function()
-      require('vim.treesitter._select').select_next(vim.v.count1)
-      end, {desc = 'Select next Tree-sitter node'})
-
-    vim.keymap.set('x', '<BS>', function()
-      require('vim.treesitter._select').select_prev(
-        vim.v.count1
-      )
-      end, {
-      desc = 'Select previous Tree-sitter node',
     })
   end,
 }
