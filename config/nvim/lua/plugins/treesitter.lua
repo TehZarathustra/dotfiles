@@ -1,4 +1,4 @@
-local parsers = {
+local languages = {
   'lua',
   'vim',
   'vimdoc',
@@ -18,9 +18,6 @@ local parsers = {
   'bash',
 }
 
--- @TODO
--- having treesitter adds a lot of dependencies
--- gotta consider opting-out
 return {
   'nvim-treesitter/nvim-treesitter',
   branch = 'main',
@@ -30,35 +27,12 @@ return {
   config = function()
     local treesitter = require('nvim-treesitter')
 
-    treesitter.setup()
-
-    -- No-op for parsers that are already installed.
-    treesitter.install(parsers)
-
-    vim.api.nvim_create_autocmd('FileType', {
-      callback = function(args) pcall(vim.treesitter.start, args.buf) end})
+    treesitter.install(languages)
 
     vim.api.nvim_create_autocmd('FileType', {
       callback = function(args)
-        if not pcall(vim.treesitter.start, args.buf) then
-          return
-        end
-
-        vim.keymap.set({'n', 'x'}, '<CR>', function()
-          require('vim.treesitter._select').select_next(vim.v.count1)
-          end, {
-          buffer = args.buf,
-          desc = 'Select next Tree-sitter node',
-        })
-
-        vim.keymap.set('x', '<BS>', function()
-          require('vim.treesitter._select').select_prev(vim.v.count1)
-          end, {
-          buffer = args.buf,
-          desc = 'Select previous Tree-sitter node',
-          }
-        )
-      end,
+        pcall(vim.treesitter.start)
+      end
     })
   end,
 }
