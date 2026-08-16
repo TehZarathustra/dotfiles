@@ -30,7 +30,7 @@ return {
     treesitter.install(languages)
 
     vim.api.nvim_create_autocmd('FileType', {
-      callback = function(args)
+      callback = function()
         pcall(vim.treesitter.start)
       end
     })

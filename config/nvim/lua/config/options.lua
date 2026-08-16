@@ -16,13 +16,12 @@ vim.o.winborder = 'rounded'
 
 -- move to some other place?
 vim.diagnostic.config({
-    virtual_text = false,
-    signs = true,
-    underline = false,
-    update_in_insert = false,
-    severity_sort = true,
+  virtual_text = false,
+  signs = true,
+  underline = false,
+  update_in_insert = false,
+  severity_sort = true,
 })
 
 -- allow project local configs
 vim.opt.exrc = true
-
