@@ -13,3 +13,9 @@
 
 [fetch]
   prune = true
+
+[diff]
+  tool = nvimdiff
+
+[difftool]
+  prompt = false
